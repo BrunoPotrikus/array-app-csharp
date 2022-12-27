@@ -8,16 +8,46 @@ public class Program
         meuArray[0] = 12;
 
         Console.Clear();
-
-        for (var index = 0; index < meuArray.Length; index++)
-        {
-            Console.WriteLine(meuArray[index]);
-        }
-
+        Console.WriteLine("Percorrendo item a item");
         Console.WriteLine(meuArray[0]);
         Console.WriteLine(meuArray[1]);
         Console.WriteLine(meuArray[2]);
         Console.WriteLine(meuArray[3]);
         Console.WriteLine(meuArray[4]);
+
+        Console.WriteLine();
+        Console.WriteLine("Percorrendo com laço for");
+        for (var index = 0; index < meuArray.Length; index++)
+        {
+            Console.WriteLine(meuArray[index]);
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("Percorrendo com laço foreach");
+        foreach (var item in meuArray)
+        {
+            Console.WriteLine(item);
+        }
+
+        var clientes = new Cliente[5];
+        clientes[0] = new Cliente(1, "Bruno");
+
+        foreach(var cliente in clientes)
+        {
+            Console.WriteLine(cliente.Id);
+            Console.WriteLine(cliente.Name);
+        }
+    }
+}
+
+public struct Cliente
+{
+    public int Id;
+    public string Name;
+
+    public Cliente(int id, string name)
+    {
+        Id = id;
+        Name = name;
     }
 }
