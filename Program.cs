@@ -37,6 +37,16 @@ public class Program
             Console.WriteLine(cliente.Id);
             Console.WriteLine(cliente.Name);
         }
+
+        // Copiando valores de um array para outro
+        var arr1 = new int[5];
+        var arr2 = new int[5];
+
+        arr1[0] = arr2[0];
+        arr2[0] = 10;
+
+        Console.WriteLine(arr1[0]);
+        Console.WriteLine(arr1[1]);
     }
 }
 
